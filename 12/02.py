@@ -37,6 +37,7 @@ def all_configurations(springs, contiguous):
     return 0
   min_length = sum(contiguous) + len(contiguous) - 1
   if min_length > len(springs):
+    memo[cache_key] = 0
     return 0
 
   next = contiguous[1:]
